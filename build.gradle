@@ -1,0 +1,31 @@
+group 'ries.dan'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+group 'ries.dan'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '1.5.8.RELEASE'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version: '1.5.8.RELEASE'
+    compile group: 'org.springframework.boot', name: 'spring-boot-actuator', version: '1.5.8.RELEASE'
+    compile group: 'mysql', name: 'mysql-connector-java', version: '5.1.41'
+    compile group: 'com.google.guava', name: 'guava', version: '23.0'
+    testCompile group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: '1.5.8.RELEASE'
+    testCompile group: 'com.h2database', name: 'h2', version: '1.4.196'
+}
