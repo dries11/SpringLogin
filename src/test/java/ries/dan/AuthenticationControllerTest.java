@@ -2,7 +2,6 @@ package ries.dan;
 
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.jupiter.api.Disabled;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
@@ -53,7 +52,6 @@ public class AuthenticationControllerTest {
     }
 
     @Test
-    @Disabled("not working yet")
     public void createUserTest() throws Exception {
         when(userAuthService.createNewUser(anyString(), anyString())).thenReturn(1);
         when(userService.createNewUser(1, any(UserDTO.class))).thenReturn(mockUser);
@@ -77,7 +75,6 @@ public class AuthenticationControllerTest {
     }
 
     @Test
-    @Disabled("not working yet")
     public void loginUserTest() throws Exception {}
 
 }
