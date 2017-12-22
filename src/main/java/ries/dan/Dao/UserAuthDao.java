@@ -10,4 +10,6 @@ public interface UserAuthDao extends CrudRepository<UserAuth, Integer>{
     @Query(value = "Select * from pick_up.user_auth where pick_up.user_auth.username= :username", nativeQuery = true)
     UserAuth getUserAuthByUsername(@Param("username") String username);
 
+    Iterable<UserAuth> findAll();
+
 }

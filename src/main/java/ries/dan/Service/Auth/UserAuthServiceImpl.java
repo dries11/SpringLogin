@@ -6,6 +6,8 @@ import ries.dan.Model.User.Auth.UserAuthFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+
 @Service
 public class UserAuthServiceImpl implements UserAuthServiceIF{
 
@@ -38,5 +40,12 @@ public class UserAuthServiceImpl implements UserAuthServiceIF{
             return userAuth.getId();
         } else
             return null;
+    }
+
+    @Override
+    public ArrayList<UserAuth> getAllUsers() {
+        ArrayList<UserAuth> userAuths = new ArrayList<>();
+        userAuthDao.findAll().forEach(userAuths::add);
+        return userAuths;
     }
 }

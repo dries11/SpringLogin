@@ -1,9 +1,14 @@
 package ries.dan.Service.Auth;
 
+import ries.dan.Model.User.Auth.UserAuth;
+
+import java.util.ArrayList;
+
 public interface UserAuthServiceIF {
 
-    public Integer createNewUser(String username, String password);
+    Integer createNewUser(String username, String password);
 
-    public Integer loginUser(String username, String password);
+    Integer loginUser(String username, String password);
 
+    ArrayList<UserAuth> getAllUsers();
 }
