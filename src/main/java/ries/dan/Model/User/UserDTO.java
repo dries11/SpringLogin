@@ -1,7 +1,5 @@
 package ries.dan.Model.User;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
 public class UserDTO {
 
     private String username;
@@ -13,9 +11,6 @@ public class UserDTO {
     private String lastName;
 
     private String email;
-
-    @JsonIgnore
-    private Integer gamesPlayed;
 
     public UserDTO(){}
 
@@ -66,12 +61,5 @@ public class UserDTO {
     public void setEmail(String email) {
         this.email = email;
     }
-
-    public Integer getGamesPlayed() {
-        return gamesPlayed;
-    }
-
-    public void setGamesPlayed(Integer gamesPlayed) {
-        this.gamesPlayed = gamesPlayed;
-    }
+    
 }
